@@ -48,12 +48,253 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
+//My variables and mixins
+
+@darkcolor:#66798c;
+@lightcolor:#ffeddf;
+@headingfont:'Roboto', sans-serif;
+@textfont:'Abril Fatface', cursive;
+
+.flexcolumndirection(){
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 }
 
-html, body {
-    height: 100%;
+.wrapheadings (){
+	background-color: @lightcolor;
+	padding:2%;
+	color: @darkcolor;
+	font-family: @headingfont;
 }
+
+.normaltext(){
+	font-family:@textfont;
+	color:#fff;	
+	padding:1%;	
+}
+
+
+//Variables and mixins end here
+
+
+//General styling start here
+html {
+	font-size: 62.5%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+// General styling ends here
+
+
+
+
+
+//Main wrapper
+	.main-wrapper {
+		display: flex;
+		// height: 100vh;
+
+	    @media (max-width:500px) {
+		flex-direction: column;
+	}//media query for main-wrapper closes here
+
+
+	
+
+	.wrapper-left {
+		background-color:@lightcolor;		
+		width: 40%;
+		font-family: @textfont;
+		@media (max-width:500px){
+			width: 100%;
+		}//media query for .wrapper-left closes here
+
+		header {
+			display: flex;
+			justify-content: center;
+			font-size: 1.5rem;
+			
+
+		nav {
+			display: flex;
+			justify-content: space-evenly;
+			width: 90%;			
+		a {
+			text-decoration: none;
+			color: #fff;
+			background-color: @darkcolor;
+			margin-top: 5%;
+			padding:1%;
+		@media (max-width:500px) {
+				padding:2%;
+			}//media query for a tag closes here	
+			
+			
+		}//this closes a tag inside nav	- wrapper left
+		}// this closes nav	- wrapper left
+		}//this closes header - wrapper left
+
+		.one {
+			margin-top: 5%;
+			height: 30vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		
+		img {
+			height: 25vh;
+			border-radius: 50%;
+			
+		}//this closes img tag inside wrapper left	
+		}//this closes class one inside wrapper left
+
+		.two {
+			height:15%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		div {
+			width: 50%;
+			padding:1%;
+			margin:1%;
+
+		h1 {
+			.wrapheadings();
+			font-size: 3rem;
+		}// this closes h1
+		
+		h3 {
+			font-size: 2.2rem;
+			.wrapheadings();			
+			
+		}//this closes h3 inside .two
+		}// this closes div	
+		}//this closes .two
+
+		.three {
+			
+			height: 38%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		
+		div {
+			width: 70%;
+			margin:8%;
+			color:@darkcolor;
+			font-size:1.8rem;
+	
+			
+
+		h3 {
+			font-size: 2.2rem;
+			background-color: @darkcolor;
+			padding:2%;
+			color:#fff;
+
+		}//this closes h3 inside three	
+		p {			
+			margin-top: 1%;			
+		}//this closes p inside both div tags
+		
+		}//this closes div	
+						
+		}//this closes .three
+
+	} // this closes wrapper-left 	
+
+	
+	
+	
+//--------------------------------------------SEPARATION BETWEEN LEFT AND RIGHT SIDE----------------------------			
+			
+	
+	
+	
+			
+	
+		
+			
+	
+	
+		.wrapper-right {
+		background-color: @darkcolor;
+		width: 60%;
+		@media (max-width:500px){
+			width: 100%;
+		}
+		
+		.flexcolumndirection();
+		
+		.card {
+			.normaltext();				
+			display: flex;
+			justify-content: center;
+			height: 32%;
+		@media (max-width:500px) {
+			margin-top:5%;
+			}//media query for .card closes here
+						
+
+		div {
+			width: 60%;				
+			min-height: 100%;	
+										
+		h3 {
+			font-size: 3.3rem;
+			.wrapheadings();
+			
+		} //this closes h3 inside card
+		
+		h4 {
+			font-size:2.5rem;
+			padding:1%;		
+			
+			
+		}//this closes h4 inside card
+		h5 {
+			font-size:2rem;
+			
+			
+		}//this closes h5 inside card
+
+		ul {
+			margin-top:3%;
+			margin-left:1%;
+			font-size:1.7rem;
+			
+
+		li {
+			list-style-type:circle;		
+					
+														
+
+				   }//this closes li inside card	
+				}//this closes ul inside card				
+			}//this closes div inside card		
+		}//this closes card		
+	}//this closes wrapper-right
+} // this closes .main-wrapper
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

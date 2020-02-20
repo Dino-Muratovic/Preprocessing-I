@@ -1,1 +1,284 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+.main-wrapper {
+  display: flex;
+}
+@media (max-width: 500px) {
+  .main-wrapper {
+    flex-direction: column;
+  }
+}
+.main-wrapper .wrapper-left {
+  background-color: #ffeddf;
+  width: 40%;
+  font-family: 'Abril Fatface', cursive;
+}
+@media (max-width: 500px) {
+  .main-wrapper .wrapper-left {
+    width: 100%;
+  }
+}
+.main-wrapper .wrapper-left header {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.main-wrapper .wrapper-left header nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+}
+.main-wrapper .wrapper-left header nav a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #66798c;
+  margin-top: 5%;
+  padding: 1%;
+}
+@media (max-width: 500px) {
+  .main-wrapper .wrapper-left header nav a {
+    padding: 2%;
+  }
+}
+.main-wrapper .wrapper-left .one {
+  margin-top: 5%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-wrapper .wrapper-left .one img {
+  height: 25vh;
+  border-radius: 50%;
+}
+.main-wrapper .wrapper-left .two {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-wrapper .wrapper-left .two div {
+  width: 50%;
+  padding: 1%;
+  margin: 1%;
+}
+.main-wrapper .wrapper-left .two div h1 {
+  background-color: #ffeddf;
+  padding: 2%;
+  color: #66798c;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3rem;
+}
+.main-wrapper .wrapper-left .two div h3 {
+  font-size: 2.2rem;
+  background-color: #ffeddf;
+  padding: 2%;
+  color: #66798c;
+  font-family: 'Roboto', sans-serif;
+}
+.main-wrapper .wrapper-left .three {
+  height: 38%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-wrapper .wrapper-left .three div {
+  width: 70%;
+  margin: 8%;
+  color: #66798c;
+  font-size: 1.8rem;
+}
+.main-wrapper .wrapper-left .three div h3 {
+  font-size: 2.2rem;
+  background-color: #66798c;
+  padding: 2%;
+  color: #fff;
+}
+.main-wrapper .wrapper-left .three div p {
+  margin-top: 1%;
+}
+.main-wrapper .wrapper-right {
+  background-color: #66798c;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .main-wrapper .wrapper-right {
+    width: 100%;
+  }
+}
+.main-wrapper .wrapper-right .card {
+  font-family: 'Abril Fatface', cursive;
+  color: #fff;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  height: 32%;
+}
+@media (max-width: 500px) {
+  .main-wrapper .wrapper-right .card {
+    margin-top: 5%;
+  }
+}
+.main-wrapper .wrapper-right .card div {
+  width: 60%;
+  min-height: 100%;
+}
+.main-wrapper .wrapper-right .card div h3 {
+  font-size: 3.3rem;
+  background-color: #ffeddf;
+  padding: 2%;
+  color: #66798c;
+  font-family: 'Roboto', sans-serif;
+}
+.main-wrapper .wrapper-right .card div h4 {
+  font-size: 2.5rem;
+  padding: 1%;
+}
+.main-wrapper .wrapper-right .card div h5 {
+  font-size: 2rem;
+}
+.main-wrapper .wrapper-right .card div ul {
+  margin-top: 3%;
+  margin-left: 1%;
+  font-size: 1.7rem;
+}
+.main-wrapper .wrapper-right .card div ul li {
+  list-style-type: circle;
+}
